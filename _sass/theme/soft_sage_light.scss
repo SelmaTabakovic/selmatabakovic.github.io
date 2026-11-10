@@ -1,0 +1,63 @@
+
+/* =========================================
+   Soft Sage — Light Theme
+   ========================================= */
+
+/* Sass settings */
+$primary-color: #147A3C;
+$gray: #304B39;
+$dark-gray: #172A1E;
+$darker-gray: #102017;
+$light-gray: #91AF98;
+$lighter-gray: #C5DCC7;
+
+$danger-color: #A84444;
+$info-color: #21633A;
+$notice-color: #304B39;
+$success-color: #35764A;
+$warning-color: #926B28;
+
+$border-radius: 4px;
+$box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition: all 0.2s ease-in-out;
+$masthead-height: 70px;
+$navicon-width: 28px;
+$navicon-height: 4px;
+$sidebar-link-max-width: 250px;
+$sidebar-screen-min-width: 1024px;
+
+/* Light mode colors */
+:root {
+
+  /* Base */
+  --global-base-color: #172A1E;
+
+  /* Background and text */
+  --global-bg-color: #DCEBDD;
+  --global-text-color: #172A1E;
+  --global-text-color-light: #304B39;
+
+  /* Links — richer green */
+  --global-link-color: #147A3C;
+  --global-link-color-hover: #095B2B;
+  --global-link-color-visited: #326B46;
+
+  /* Navigation */
+  --global-masthead-link-color: #172A1E;
+  --global-masthead-link-color-hover: #147A3C;
+
+  /* Borders */
+  --global-border-color: #91AF98;
+  --global-dark-border-color: #73947B;
+
+  /* Footer */
+  --global-footer-bg-color: #C5DCC7;
+
+  /* Code blocks */
+  --global-code-background-color: #C5DCC7;
+  --global-code-text-color: #172A1E;
+
+  /* Captions and tables */
+  --global-fig-caption-color: #304B39;
+  --global-thead-color: #C5DCC7;
+}

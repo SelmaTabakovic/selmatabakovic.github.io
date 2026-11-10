@@ -1,0 +1,50 @@
+
+/* Soft Sage — Dark Theme */
+
+$primary-color: #B5E8C0;
+$gray: #CADCCE;
+$dark-gray: #F2F7F0;
+$darker-gray: #253D2F;
+$light-gray: #8DAE97;
+$lighter-gray: #668573;
+
+$danger-color: #E9A19C;
+$info-color: #B5E8C0;
+$notice-color: #CADCCE;
+$success-color: #A9DDB4;
+$warning-color: #E2C68E;
+
+$border-radius: 4px;
+$box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition: all 0.2s ease-in-out;
+$masthead-height: 70px;
+$navicon-width: 28px;
+$navicon-height: 4px;
+$sidebar-link-max-width: 250px;
+$sidebar-screen-min-width: 1024px;
+
+html[data-theme="dark"] {
+  --global-base-color: #B5E8C0;
+
+  --global-bg-color: #293F35;
+  --global-text-color: #F2F7F0;
+  --global-text-color-light: #CADCCE;
+
+  --global-link-color: #B5E8C0;
+  --global-link-color-hover: #DCF5E0;
+  --global-link-color-visited: #C7E6CC;
+
+  --global-masthead-link-color: #F2F7F0;
+  --global-masthead-link-color-hover: #B5E8C0;
+
+  --global-border-color: #668573;
+  --global-dark-border-color: #8DAE97;
+
+  --global-footer-bg-color: #3B5949;
+
+  --global-code-background-color: #3B5949;
+  --global-code-text-color: #F2F7F0;
+
+  --global-fig-caption-color: #CADCCE;
+  --global-thead-color: #3B5949;
+}

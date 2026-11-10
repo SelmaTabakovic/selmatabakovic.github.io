@@ -5,32 +5,222 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<style>
+/* Section headings */
+.publication-section {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin: 2.2rem 0 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--global-border-color);
+}
 
-{% include base_path %}
+/* Introduction */
+.publication-intro {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+/* Publication entries */
+.publication-entry {
+  margin-bottom: 1.6rem;
+}
 
+/* Publication titles */
+.publication-entry h3 {
+  font-size: 0.98em;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.25rem;
+}
 
+/* Authors */
+.publication-entry .authors {
+  font-size: 0.85em;
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.25rem;
+}
 
+/* Publication status and metadata */
+.publication-entry .meta {
+  font-size: 0.82em;
+  color: var(--global-text-color-light);
+  font-style: italic;
+  margin-bottom: 0.45rem;
+}
+
+/* Descriptions */
+.publication-entry p {
+  margin: 0;
+  font-size: 0.92em;
+  line-height: 1.55;
+}
+
+/* Links */
+.publication-entry a {
+  text-decoration: none;
+}
+
+.publication-entry a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<p class="publication-intro">
+  My research focuses on reinforcement learning, statistical learning,
+  and the evaluation of data-driven decision-making methods,
+  with applications in healthcare.
+</p>
+
+<h2 class="publication-section">Research Papers</h2>
+
+<div class="publication-entry">
+  <h3>
+    Early Detection of Sepsis in Emergency Department and
+    Prehospital Settings Using Artificial Intelligence:
+    A Scoping Review
+  </h3>
+  <div class="authors">
+    <strong>Selma Tabakovic</strong>, Ivana Pepic,
+    Robert Feldt, Lars Ljungström, Daniel Dalevi,
+    Lars-Magnus Andersson, Marina Axelson-Fisk,
+    Katarina Bohm, and Stefan Candefjord
+  </div>
+  <div class="meta">
+    Under consideration at
+    <a href="https://bmcinfectdis.biomedcentral.com/">BMC Infectious Diseases</a>
+  </div>
+  <p>
+    Reviews AI and machine learning approaches for early sepsis
+    detection, examining methodological differences in model
+    development, validation, and evaluation. Highlights limitations
+    in external and prospective validation and challenges in
+    translating predictive performance into clinical practice.
+  </p>
+</div>
+
+<div class="publication-entry">
+  <h3>
+    A Multi-Head Dueling Double Deep Q-Network Approach
+    for Personalized Sepsis Treatment
+  </h3>
+  <div class="authors">
+    <strong>Selma Tabakovic</strong>, Robert Feldt,
+    and Marina Axelson-Fisk
+  </div>
+  <div class="meta">
+    Under consideration at
+    <a href="https://bmcmedinformdecismak.biomedcentral.com/">BMC Medical Informatics and Decision Making</a>
+  </div>
+  <p>
+    Proposes a multi-head deep reinforcement learning architecture
+    that combines shared representations with severity-specific
+    treatment policies. Evaluates its ability to learn personalized
+    treatment strategies from retrospective intensive-care data
+    using off-policy evaluation.
+  </p>
+</div>
+
+<div class="publication-entry">
+  <h3>
+    A Controlled Simulation Framework for Ground-Truth Evaluation
+    of Offline Reinforcement Learning in Clinical Decision Making
+  </h3>
+  <div class="authors">
+    <strong>Selma Tabakovic</strong>, Robert Feldt,
+    and Marina Axelson-Fisk
+  </div>
+  <div class="meta">Manuscript in preparation</div>
+  <p>
+    Develops a controlled simulation framework that enables
+    reinforcement learning policies to be evaluated against
+    known ground truth. Uses the framework to investigate
+    treatment personalization, the influence of data-generating
+    policies, and the reliability of offline policy evaluation.
+  </p>
+</div>
+
+<div class="publication-entry">
+  <h3>
+    Reliability of Off-Policy Evaluation in Clinical Reinforcement
+    Learning: A Controlled Simulation Study
+  </h3>
+  <div class="authors">
+    <strong>Selma Tabakovic</strong>, Robert Feldt,
+    and Marina Axelson-Fisk
+  </div>
+  <div class="meta">Manuscript in preparation</div>
+  <p>
+    Investigates the reliability of off-policy evaluation under
+    different data-generating policies, examining how errors in
+    behavior-policy and value-function estimation, together with
+    limited policy overlap, affect policy-value estimates and rankings.
+  </p>
+</div>
+
+<h2 class="publication-section">Theses</h2>
+
+<div class="publication-entry">
+  <h3>
+    Data-Driven Decision Support in Healthcare:
+    Sequential Decision-Making and Policy Evaluation
+  </h3>
+  <div class="meta">
+    PhD thesis · Chalmers University of Technology · In preparation
+  </div>
+  <p>
+    Investigates data-driven methods for clinical decision support,
+    focusing on personalized treatment strategies using reinforcement
+    learning and the challenges of evaluating their performance
+    using retrospective data.
+  </p>
+</div>
+
+<div class="publication-entry">
+  <h3>
+    <a href="https://odr.chalmers.se/items/8f403d44-4c37-4019-a59f-fd4aea769f30">Co-clustering of Tensor Data Using Sparse Tensor Factorisation</a>
+  </h3>
+  <div class="meta">
+    Master's thesis · Chalmers University of Technology · 2020
+  </div>
+  <p>
+    Develops two co-clustering methods based on sparse tensor
+    decomposition, using sign patterns and hierarchical clustering
+    to identify structures in multidimensional data. Evaluates
+    their performance and robustness through simulation studies
+    and an application to genomic data.
+  </p>
+</div>
+
+<div class="publication-entry">
+  <h3>
+    <a href="https://odr.chalmers.se/items/cb7bd328-224a-44de-a654-609052d83c32">Charge and Heat Control in Nanoelectronic Devices</a>
+  </h3>
+  <div class="meta">
+    Bachelor's thesis · Chalmers University of Technology · 2017
+  </div>
+  <p>
+    Investigates charge and heat transport in quantum-dot systems
+    using master equations and scattering theory, focusing on
+    thermoelectric properties and the control of heat and
+    electrical currents.
+  </p>
+</div>
+
+<h2 class="publication-section">Selected Presentations</h2>
+
+<div class="publication-entry">
+  <h3>WASP Winter Conference</h3>
+  <div class="meta">2022, 2023, 2024, 2025</div>
+  <p>Poster presentations.</p>
+</div>
+
+<div class="publication-entry">
+  <h3>
+    <a href="https://www.chalmers.se/en/current/calendar/nordstat-2023/">NORDSTAT 2023 — Nordic Conference in Mathematical Statistics</a>
+  </h3>
+  <div class="meta">Gothenburg, Sweden · June 2023</div>
+  <p>Poster presentation.</p>
+</div>
